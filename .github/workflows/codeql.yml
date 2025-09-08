@@ -38,10 +38,17 @@ jobs:
           # queries: security-extended,security-and-quality
 
 
-      # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
-      # If this step fails, then you should remove it and run the build manually (see below)
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
+      # Custom build steps for multi-module MATSim Maven project
+      - name: Build with Maven
+        run: |
+          # Build the main matsim module first
+          mvn clean compile -pl matsim -am -DskipTests=true
+          
+          # Build the shared_mobility contrib module
+          mvn clean compile -pl contribs/shared_mobility -am -DskipTests=true
+          
+          # Build examples if needed
+          mvn clean compile -pl examples -am -DskipTests=true
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
