@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehicleDefinitions xmlns="http://www.matsim.org/files/dtd"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://www.matsim.org/files/dtd
+                                        https://www.matsim.org/files/dtd/vehicleDefinitions_v2.0.xsd">
+
+    <!-- ========= PRIVATE CAR ========= -->
+    <vehicleType id="car">
+        <description>Standard private automobile</description>
+        <capacity seats="4"/>
+        <length meter="4.5"/>
+        <width  meter="1.6"/>
+        <maximumVelocity meterPerSecond="40.0"/>
+        <passengerCarEquivalents pce="1.0"/>
+        <networkMode networkMode="car"/>
+    </vehicleType>
+
+    <!-- ========= PRIVATE BICYCLE ========= -->
+    <vehicleType id="bike">
+        <description>Personal bicycle</description>
+        <capacity seats="1"/>
+        <length meter="1.8"/>
+        <width  meter="0.50"/>
+        <maximumVelocity meterPerSecond="4.8"/>
+        <passengerCarEquivalents pce="0.20"/>
+        <networkMode networkMode="bike"/>
+        <flowEfficiencyFactor factor="1.0"/>
+    </vehicleType>
+
+    <!-- ========= MOBI BIKE-SHARE ========= -->
+    <vehicleType id="sharing:mobi_bike">
+        <description>Docked bike-share (Mobi by Rogers)</description>
+        <capacity seats="1"/>
+        <length meter="1.8"/>
+        <width  meter="0.55"/>
+        <maximumVelocity meterPerSecond="4.8"/>
+        <passengerCarEquivalents pce="0.20"/>
+        <networkMode networkMode="bike"/>
+        <flowEfficiencyFactor factor="1.0"/>
+    </vehicleType>
+
+    <!-- ========= MOBI E-BIKE-SHARE (NEW) ========= -->
+    <vehicleType id="sharing:mobi_ebike">
+        <description>Docked pedal-assist e-bike (Mobi by Rogers)</description>
+        <capacity seats="1"/>
+        <length meter="1.8"/>
+        <width  meter="0.55"/>
+        <maximumVelocity meterPerSecond="8.9"/>  <!-- ~22 km/h, faster than classic bike -->
+        <passengerCarEquivalents pce="0.25"/>
+        <networkMode networkMode="bike"/>
+        <flowEfficiencyFactor factor="1.0"/>
+    </vehicleType>
+
+    <!-- ========= RIDE-HAIL / TAXI ========= -->
+    <vehicleType id="ride">
+        <description>Taxi / ride-hail</description>
+        <capacity seats="4"/>
+        <length meter="4.5"/>
+        <width  meter="1.7"/>
+        <maximumVelocity meterPerSecond="33.33"/> <!-- 120 km/h upper bound -->
+        <passengerCarEquivalents pce="1.0"/>
+        <networkMode networkMode="car"/>
+    </vehicleType>
+
+    <!-- ========= GENERIC “OTHER” ========= -->
+    <vehicleType id="other">
+        <description>Generic network vehicle placeholder</description>
+        <capacity seats="1"/>
+        <length meter="7.5"/>
+        <width  meter="1.0"/>
+        <maximumVelocity meterPerSecond="30.0"/>
+        <passengerCarEquivalents pce="1.0"/>
+        <networkMode networkMode="car"/>
+    </vehicleType>
+
+    <vehicleType id="walk">
+        <description>Pedestrian</description>
+        <capacity seats="1"/>
+        <length meter="0.8"/>
+        <width  meter="0.7"/>
+        <maximumVelocity meterPerSecond="1.7"/>  <!-- ~4.86 km/h -->
+        <passengerCarEquivalents pce="0.10"/>
+        <networkMode networkMode="walk"/>
+        <flowEfficiencyFactor factor="1.0"/>
+    </vehicleType>
+
+    <vehicleType id="walk_net">
+        <description>Pedestrian</description>
+        <capacity seats="1"/>
+        <length meter="0.8"/>
+        <width  meter="0.7"/>
+        <maximumVelocity meterPerSecond="0.65"/>  <!-- ~4.86 km/h -->
+        <passengerCarEquivalents pce="0.10"/>
+        <networkMode networkMode="walk"/>
+        <flowEfficiencyFactor factor="1.0"/>
+    </vehicleType>
+
+</vehicleDefinitions>

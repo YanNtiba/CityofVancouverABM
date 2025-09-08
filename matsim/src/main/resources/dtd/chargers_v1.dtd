@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ============================================================ -->
+
+<!-- For further information or questions, please contact
+     Michal Maciejewski, maciejewski at vsp dot tu-berlin dot de -->
+
+<!-- ============================================================ -->
+
+<!ELEMENT chargers (charger)*>
+
+<!ELEMENT charger (attributes?)>
+
+<!-- link - id of the link where the charger is located -->
+<!-- plug_power - in kWh -->
+<!-- plug_count - number of plugs; 1 if not provided -->
+<!-- type CDATA - "default" if not provided -->
+<!ATTLIST charger
+	id CDATA #REQUIRED
+	link CDATA #REQUIRED
+	plug_power CDATA #REQUIRED
+	plug_count CDATA #IMPLIED
+	type CDATA #IMPLIED >
+
+<!ELEMENT attributes (attribute*)>
+
+<!ELEMENT attribute ANY>
+<!ATTLIST attribute
+	name CDATA #REQUIRED
+	class CDATA #REQUIRED >

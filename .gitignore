@@ -1,0 +1,54 @@
+# Maven build artifacts
+target/
+*.jar
+*.war
+*.ear
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# MATSim output files
+output/
+*.events.xml*
+*.plans.xml*
+*.network.xml*
+*.vehicles.xml*
+*.facilities.xml*
+*.households.xml*
+*.linkstats.txt*
+*.traveldistancestats.txt*
+*.legHistogram.txt*
+*.scorestats.txt*
+*.stopwatch.txt*
+*.counts.txt*
+*.trips.txt*
+*.persons.txt*
+
+# Log files
+*.log
+hs_err_pid*.log
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Private/sensitive files (user should add their own)
+# Add paths to private population files here
+# Example:
+# private_data/
+# sensitive_configs/
