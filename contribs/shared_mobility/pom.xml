@@ -24,11 +24,6 @@
 			<artifactId>jsr305</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.matsim.contrib</groupId>
-			<artifactId>common</artifactId>
-			<version>${project.parent.version}</version>
-		</dependency>
 		<!-- for jakarta.validation.constraints.NotNull, @Positive, etc. -->
 		<dependency>
 			<groupId>jakarta.validation</groupId>
