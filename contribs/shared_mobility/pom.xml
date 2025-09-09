@@ -22,13 +22,12 @@
 		<dependency>
 			<groupId>com.google.code.findbugs</groupId>
 			<artifactId>jsr305</artifactId>
-			<version>3.0.2</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.matsim.contrib</groupId>
-			<artifactId>simwrapper</artifactId>
-			<version>${project.parent.version}</version> <!-- replace with actual MATSim version if needed -->
+			<artifactId>common</artifactId>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<!-- for jakarta.validation.constraints.NotNull, @Positive, etc. -->
 		<dependency>
@@ -37,10 +36,11 @@
 			<version>3.1.1</version>
 		</dependency>
 
+		<!-- Test dependencies -->
 		<dependency>
-			<groupId>org.matsim.contrib</groupId>
-			<artifactId>common</artifactId>
-			<version>${project.parent.version}</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
